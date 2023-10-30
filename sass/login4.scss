@@ -129,3 +129,20 @@ body {
     }
   }
 }
+// for mobile with width <=350
+@media screen and (width <= 350px) {
+  .heading {
+    &__h1 {
+      font-size: 6rem;
+    }
+
+    &__input {
+      width: 25rem;
+      height: 4.8rem;
+    }
+    &__button {
+      width: 25rem;
+      height: 4.4rem;
+    }
+  }
+}

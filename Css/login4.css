@@ -124,5 +124,18 @@ body {
     line-height: normal;
   }
 }
+@media screen and (width <= 350px) {
+  .heading__h1 {
+    font-size: 6rem;
+  }
+  .heading__input {
+    width: 25rem;
+    height: 4.8rem;
+  }
+  .heading__button {
+    width: 25rem;
+    height: 4.4rem;
+  }
+}
 
 /*# sourceMappingURL=login4.css.map */

@@ -128,13 +128,13 @@ body {
   .heading__h1 {
     font-size: 6rem;
   }
-  .heading__input {
-    width: 25rem;
-    height: 4.8rem;
-  }
   .heading__button {
     width: 25rem;
     height: 4.4rem;
+  }
+  .heading__inputsection--input {
+    width: 25rem;
+    height: 4.8rem;
   }
 }
 

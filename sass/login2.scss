@@ -137,13 +137,15 @@ body {
       font-size: 6rem;
     }
 
-    &__input {
-      width: 25rem;
-      height: 4.8rem;
-    }
     &__button {
       width: 25rem;
       height: 4.4rem;
+    }
+    &__inputsection {
+      &--input {
+        width: 25rem;
+        height: 4.8rem;
+      }
     }
   }
 }

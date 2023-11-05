@@ -1,27 +1,35 @@
+@font-face {
+  font-family: iranRegularSans;
+  src: url(../fonts/AIranianSansRegular.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 html {
+  // this defines what 1rem is
   font-size: 10px;
+  height: 100%;
 }
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100%;
 }
 // write code mobile-first
 
 // Coding for mobile
 @media screen and (width <= 570px) {
   .heading {
-    margin: 10rem;
+    margin: 10rem 2rem 0 2rem;
+    width: 100%;
+    height: 75%;
 
     &__h1 {
       color: #4e51bf;
       text-align: center;
-      font-family: "Noto Sans", sans-serif;
+      margin-right: 2rem;
+      font-family: iranRegularSans;
       text-transform: uppercase;
       font-size: 6.4rem;
       font-style: normal;
@@ -30,8 +38,8 @@ body {
       letter-spacing: 0.32rem;
     }
     &__input {
-      width: 33.3rem;
-      height: 5.1rem;
+      width: calc(100% - 4rem);
+      margin: 1rem auto;
       flex-shrink: 0;
       border-radius: 1.1rem;
       border: 0.2rem solid #ec3a3b;
@@ -44,29 +52,36 @@ body {
       &::placeholder {
         color: #000;
         opacity: 1;
+        font-family: iranRegularSans;
+        font-weight: 300;
       }
     }
     &__button {
-      width: 33.3rem;
+      width: calc(100% - 4rem);
+      margin: 2rem auto;
       height: 4.7rem;
       flex-shrink: 0;
       border-radius: 0.9rem;
       background: rgba(235, 27, 27, 0.86);
       margin-top: 2rem;
       color: #fff;
+      font-family: iranRegularSans;
+      font-weight: 700;
+      outline: none;
+      border: none;
       cursor: pointer;
     }
   }
   .footer {
     text-align: center;
-    margin-top: 100%;
+    height: 25%;
     display: flex;
     flex-direction: column;
 
     &__vcheck {
       color: #000;
       text-align: center;
-      font-family: "Noto Sans", sans-serif;
+      font-family: iranRegularSans;
       font-size: 1.4rem;
       font-style: normal;
       margin-bottom: 1rem;
@@ -76,7 +91,7 @@ body {
     &__version {
       color: rgba(0, 0, 0, 0.6);
       text-align: center;
-      font-family: "Noto Sans", sans-serif;
+      font-family: iranRegularSans;
       font-size: 1.4rem;
       font-style: normal;
       font-weight: 500;
@@ -84,20 +99,20 @@ body {
     }
   }
 }
-// for mobile with width <=350
-@media screen and (width <= 350px) {
-  .heading {
-    &__h1 {
-      font-size: 6rem;
-    }
+// // for mobile with width <=350
+// @media screen and (width <= 350px) {
+//   .heading {
+//     &__h1 {
+//       font-size: 6rem;
+//     }
 
-    &__input {
-      width: 25rem;
-      height: 4.8rem;
-    }
-    &__button {
-      width: 25rem;
-      height: 4.4rem;
-    }
-  }
-}
+//     &__input {
+//       width: 25rem;
+//       height: 4.8rem;
+//     }
+//     &__button {
+//       width: 25rem;
+//       height: 4.4rem;
+//     }
+//   }
+// }

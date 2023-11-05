@@ -1,27 +1,34 @@
+@font-face {
+  font-family: iranRegularSans;
+  src: url(../fonts/AIranianSansRegular.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 html {
+  // this defines what 1rem is
   font-size: 10px;
+  height: 100%;
 }
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100%;
 }
 // write code mobile-first
 
 // Coding for mobile
 @media screen and (width <= 570px) {
   .heading {
-    margin: 10rem;
+    margin: 10rem 0;
+    width: 100%;
+    height: 65%;
 
     &__h1 {
       color: #4e51bf;
       text-align: center;
-      font-family: "Noto Sans", sans-serif;
+      font-family: iranRegularSans;
       text-transform: uppercase;
       font-size: 6.4rem;
       font-style: normal;
@@ -30,6 +37,7 @@ body {
       letter-spacing: 0.32rem;
     }
     &__inputsection {
+      width: 100%;
       display: flex;
       flex-direction: column;
       margin-top: 6rem;
@@ -37,7 +45,8 @@ body {
       position: relative;
 
       &--input {
-        width: 33.3rem;
+        width: calc(100% - 4rem);
+        margin: 0 auto;
         height: 5.1rem;
         flex-shrink: 0;
         border-radius: 0 0 1.1rem 1.1rem;
@@ -47,15 +56,23 @@ body {
         padding: 2rem;
         text-align: right;
         outline: none;
+        &::placeholder {
+          opacity: 1;
+          font-family: iranRegularSans;
+          color: #a4a4a4;
+          font-weight: 300;
+        }
       }
       &--span {
+        width: calc(100% - 4rem);
+        margin: 0 auto;
         border: 0.2rem solid #ffdd83;
         border-bottom: none;
         border-radius: 1.1rem 1.1rem 0 0;
         background-color: #ffe9ce;
         padding: 2rem;
         color: #000;
-        font-family: "Noto Sans", sans-serif;
+        font-family: iranRegularSans;
         font-size: 1.4rem;
         font-style: normal;
         font-weight: 300;
@@ -63,13 +80,16 @@ body {
         letter-spacing: 5.95px;
       }
       &--border {
+        width: calc(100% - 4rem);
+        margin: 0 auto;
         border: 0.1rem solid #ffdd83;
       }
     }
+    // button of verificationcode
     &__verificationCode {
       position: absolute;
       top: 68%;
-      left: 1rem;
+      left: 3rem;
       background-color: #e3c299;
       border: none;
       outline: none;
@@ -80,7 +100,7 @@ body {
     &__timer {
       position: absolute;
       top: 65%;
-      left: 1rem;
+      left: 3rem;
       background-color: transparent;
       color: #dbac28;
       font-size: 2rem;
@@ -91,27 +111,32 @@ body {
     }
 
     &__button {
-      width: 33.3rem;
+      width: calc(100% - 6rem);
+      margin: 5rem auto;
+      margin-left: 2.7rem;
       height: 4.7rem;
       flex-shrink: 0;
       border-radius: 0.9rem;
       background: rgba(78, 81, 191, 0.86);
-      margin-top: 2rem;
+      font-family: iranRegularSans;
+      font-weight: 700;
       color: #fff;
+      border: none;
+      outline: none;
       cursor: pointer;
     }
   }
 
   .footer {
     text-align: center;
-    margin-top: 100%;
     display: flex;
     flex-direction: column;
+    height: 35%;
 
     &__vcheck {
       color: #000;
       text-align: center;
-      font-family: "Noto Sans", sans-serif;
+      font-family: iranRegularSans;
       font-size: 1.4rem;
       margin-bottom: 1rem;
       font-style: normal;
@@ -121,7 +146,7 @@ body {
     &__version {
       color: rgba(0, 0, 0, 0.6);
       text-align: center;
-      font-family: "Noto Sans", sans-serif;
+      font-family: iranRegularSans;
       font-size: 1.4rem;
       font-style: normal;
       font-weight: 500;
@@ -130,22 +155,22 @@ body {
   }
 }
 
-// for mobile with width <=350
-@media screen and (width <= 350px) {
-  .heading {
-    &__h1 {
-      font-size: 6rem;
-    }
+// // for mobile with width <=350
+// @media screen and (width <= 350px) {
+//   .heading {
+//     &__h1 {
+//       font-size: 6rem;
+//     }
 
-    &__button {
-      width: 25rem;
-      height: 4.4rem;
-    }
-    &__inputsection {
-      &--input {
-        width: 25rem;
-        height: 4.8rem;
-      }
-    }
-  }
-}
+//     &__button {
+//       width: 25rem;
+//       height: 4.4rem;
+//     }
+//     &__inputsection {
+//       &--input {
+//         width: 25rem;
+//         height: 4.8rem;
+//       }
+//     }
+//   }
+// }
